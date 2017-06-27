@@ -1,0 +1,40 @@
+ <!DOCTYPE html>
+<html ng-app="shortUrlApp">
+     <head>
+        <title>URL-Shortner</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </head>
+        <body>
+            <div class="ui container">
+                <h1>FreeCodeCamp API Basejump: URL Shortener Microservice</h1>
+                 <hr>
+        
+                <p>User stories:</p>
+                <ul>
+                    <li>I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.</li>
+                    <li>When I visit that shortened URL, it will redirect me to my original link.</li>
+                </ul>
+                
+                <h3>Example Usage:</h3>
+                <p><a href ="https://little-url.herokuapp.com/new/https://www.google.com">https://little-url.herokuapp.com/new/https://www.google.com</a></p>
+                <p><a href ="https://little-url.herokuapp.com/new/http://foo.com:80">https://little-url.herokuapp.com/new/http://foo.com:80</a></p>
+            
+                
+                <h3>Example Output:</h3>
+                <p>{ "original_url":"http://foo.com:80", "short_url":"https://little-url.herokuapp.com/8170" }</p>
+                
+                <h3>Usage:</h3>
+                <p>https://little-url.herokuapp.com/2871/</p>
+                
+                <h3>Example Redirect:</h3>
+                <p>https://www.google.com/</p>
+                
+                <div ng-controller="shortAppCtrl">
+                    <input placeholder=" Enter URL" ng-model="urlToShorten" type="text" name="url">
+                    <a class="ui button green" ng-href='/new/{{urlToShorten}}'>Short URL</a>
+                </div>
+            </div>
+    </body>
+</html>
