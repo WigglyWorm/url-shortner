@@ -17,23 +17,10 @@
                     <li>When I visit that shortened URL, it will redirect me to my original link.</li>
                 </ul>
                 
-                <h3>Example Usage:</h3>
-                <p><a href ="https://little-url.herokuapp.com/new/https://www.google.com">https://little-url.herokuapp.com/new/https://www.google.com</a></p>
-                <p><a href ="https://little-url.herokuapp.com/new/http://foo.com:80">https://little-url.herokuapp.com/new/http://foo.com:80</a></p>
-            
-                
-                <h3>Example Output:</h3>
-                <p>{ "original_url":"http://foo.com:80", "short_url":"https://little-url.herokuapp.com/8170" }</p>
-                
-                <h3>Usage:</h3>
-                <p>https://little-url.herokuapp.com/2871/</p>
-                
-                <h3>Example Redirect:</h3>
-                <p>https://www.google.com/</p>
-                
                 <div ng-controller="shortAppCtrl">
+                    <h3>Try It</h3>
                     <input placeholder=" Enter URL" ng-model="urlToShorten" type="text" name="url">
-                    <a class="ui button green" ng-href='/new/{{urlToShorten}}'>Short URL</a>
+                    <a class="ui button green" ng-href='/new/{{urlToShorten}}'>Go</a>
                 </div>
             </div>
     </body>
